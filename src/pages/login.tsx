@@ -1,3 +1,5 @@
+import Button from "@/components/button";
+import Input from "@/components/input";
 import { cls } from "@/utils";
 import { useState } from "react";
 
@@ -28,19 +30,11 @@ export default function Login() {
       </div>
       <form className="mt-6 w-full px-10 space-y-2">
         {method == "email" ? (
-          <input
-            className="border w-full px-2 py-2 text-sm"
-            placeholder="Email"
-          />
+          <Input placeholder="Email..." />
         ) : (
-          <input
-            className="border w-full px-2 py-2 text-sm"
-            placeholder="Phone"
-          />
+          <Input placeholder="Phone..." />
         )}
-        <button className="text-sm py-2 bg-amber-500 text-white w-full rounded">
-          Get login link
-        </button>
+        <Button text="Get login link" />
       </form>
     </div>
   );

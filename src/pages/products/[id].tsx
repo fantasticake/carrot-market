@@ -1,14 +1,12 @@
+import MiniProfile from "@/components/miniProfile";
 import ProductRow from "@/components/productRow";
 
 export default function Product() {
   return (
     <div className="py-2 divide-y space-y-2">
       <div className="px-2">
-        <div className="w-full aspect-video bg-gray-300" />
-        <div className="mt-2 flex items-center space-x-2">
-          <div className="w-10 aspect-square bg-gray-300 rounded-full" />
-          <span className="">username</span>
-        </div>
+        <div className="w-full aspect-video bg-gray-300 mb-2" />
+        <MiniProfile size="lg" username="username" />
       </div>
       <div className="px-2 pb-2">
         <h1 className="text-2xl font-bold mt-2">product name</h1>

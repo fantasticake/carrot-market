@@ -1,5 +1,5 @@
+import CreateBtn from "@/components/createBtn";
 import ProductRow from "@/components/productRow";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,11 +18,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <Link href={"/products/upload"}>
-        <button className="hover:opacity-90 transition fixed bottom-16 right-6 rounded-full shadow w-12 h-12 bg-amber-500 text-white flex justify-center items-center text-3xl">
-          +
-        </button>
-      </Link>
+      <CreateBtn url="/products/upload" />
     </div>
   );
 }

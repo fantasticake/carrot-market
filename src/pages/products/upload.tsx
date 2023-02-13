@@ -1,3 +1,6 @@
+import Button from "@/components/button";
+import Input from "@/components/input";
+import Textarea from "@/components/textarea";
 import { ChangeEventHandler, useState } from "react";
 
 export default function Upload() {
@@ -49,10 +52,7 @@ export default function Upload() {
         )}
 
         <h2 className="font-medium">Product name</h2>
-        <input
-          className="focus:border-amber-500 hover:border-gray-300 outline-none border w-full px-2 py-2 text-sm"
-          placeholder="Product name..."
-        />
+        <Input placeholder="Product name..." />
         <h2 className="font-medium">Price</h2>
         <div className="flex items-center focus-within:border-amber-500 border text-sm">
           <div className="px-2 text-center">$</div>
@@ -65,13 +65,8 @@ export default function Upload() {
           <div className="px-2">USD</div>
         </div>
         <h2 className="font-medium">Description</h2>
-        <textarea
-          className="focus:border-amber-500 hover:border-gray-300 outline-none border w-full px-2 py-2 text-sm"
-          placeholder="Description..."
-        />
-        <button className="hover:opacity-90 transition shadow text-sm py-2 bg-amber-500 text-white w-full rounded">
-          Upload
-        </button>
+        <Textarea placeholder="Description..." />
+        <Button text="Upload" />
       </form>
     </div>
   );
