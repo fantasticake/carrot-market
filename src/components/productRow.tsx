@@ -23,7 +23,7 @@ const ProductRow: NextPage<ProductRowProps> = ({
 }) => {
   return (
     <Link href={`/products/${id}`}>
-      <div className="flex space-x-2 py-2 px-2">
+      <div className="hover:bg-gray-50 flex space-x-2 py-2 px-2">
         <div className="w-28 hover:w-48 transition-all aspect-square bg-gray-300 rounded" />
         <div className="flex flex-col justify-between w-full">
           <div>

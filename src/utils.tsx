@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ReactElement } from "react";
+import { ReactElement } from "react";
 import Link from "next/link";
 
 export const cls = (...classes: string[]): string => {

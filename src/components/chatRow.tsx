@@ -19,7 +19,7 @@ const ChatRow: NextPage<ChatRowProps> = ({
 }) => {
   return (
     <Link href={`/chats/${id}`}>
-      <div className="px-2 space-y-2 py-2">
+      <div className="px-2 space-y-2 py-2 hover:bg-gray-50">
         <MiniProfile
           size="lg"
           username={username}
