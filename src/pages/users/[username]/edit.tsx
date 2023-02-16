@@ -13,7 +13,7 @@ export default function Edit() {
         </div>
         <h2 className="font-medium text-sm">Username</h2>
         <Input placeholder="Username..." />
-        <Button text="Edit" />
+        <Button className="w-full">Edit</Button>
       </form>
     </div>
   );

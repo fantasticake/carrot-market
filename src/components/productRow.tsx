@@ -24,7 +24,9 @@ const ProductRow: NextPage<ProductRowProps> = ({
   return (
     <Link href={`/products/${id}`}>
       <div className="hover:bg-gray-50 flex space-x-2 py-2 px-2">
-        <div className="w-28 hover:w-48 transition-all aspect-square bg-gray-300 rounded" />
+        <div className="relative w-28 aspect-square">
+          <div className="absolute w-full h-full shadow rounded bg-gray-300 transition-all hover:w-48 hover:h-48" />
+        </div>
         <div className="flex flex-col justify-between w-full">
           <div>
             <h2 className="font-medium">{name}</h2>
@@ -32,7 +34,11 @@ const ProductRow: NextPage<ProductRowProps> = ({
             <h3 className="text-xs text-gray-700">{description}</h3>
           </div>
           <div className="flex justify-between mt-2">
-            <MiniProfile username={username} userImg={userImg} />
+            <MiniProfile
+              clickable={false}
+              username={username}
+              userImg={userImg}
+            />
             <div className="flex space-x-2 justify-end">
               <button className="flex items-center space-x-[2px]">
                 <svg

@@ -7,7 +7,7 @@ export default function Write() {
       <h1 className="font-medium mb-1">Content</h1>
       <form>
         <Textarea placeholder="Anything to write..." />
-        <Button text="Post" />
+        <Button className="w-full">Post</Button>
       </form>
     </div>
   );

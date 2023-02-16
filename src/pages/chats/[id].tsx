@@ -1,6 +1,5 @@
-import Button from "@/components/button";
+import ChatBtn from "@/components/chatBtn";
 import ChatMessage from "@/components/chatMessage";
-import Input from "@/components/input";
 
 export default function Chat() {
   return (
@@ -17,12 +16,7 @@ export default function Chat() {
           />
         ))}
       </div>
-      <div className="fixed w-full bottom-6">
-        <form className="flex px-2">
-          <Input className="rounded-l-full px-4" placeholder="Write..." />
-          <Button text=">" className="rounded-r-full w-16" />
-        </form>
-      </div>
+      <ChatBtn />
     </div>
   );
 }

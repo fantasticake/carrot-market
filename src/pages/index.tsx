@@ -1,12 +1,12 @@
 import CreateBtn from "@/components/createBtn";
+import Layout from "@/components/layout";
 import ProductRow from "@/components/productRow";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-xl font-medium my-4 px-2">Products</h1>
+    <Layout title="Products">
       <div className="flex flex-col divide-y">
-        {[1, 2, 3, 4].map(v => (
+        {[1, 2, 3, 4, 5, 6, 7].map(v => (
           <ProductRow
             key={v}
             id={v + ""}
@@ -18,8 +18,8 @@ export default function Home() {
           />
         ))}
       </div>
-      <CreateBtn url="/products/upload" />
-    </div>
+      <CreateBtn url="/products/upload">+</CreateBtn>
+    </Layout>
   );
 }
 

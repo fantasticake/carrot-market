@@ -34,7 +34,7 @@ export default function Login() {
         ) : (
           <Input placeholder="Phone..." />
         )}
-        <Button text="Get login link" />
+        <Button className="w-full">Get login link</Button>
       </form>
     </div>
   );

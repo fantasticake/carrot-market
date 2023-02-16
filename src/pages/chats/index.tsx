@@ -1,11 +1,11 @@
 import ChatRow from "@/components/chatRow";
+import Layout from "@/components/layout";
 
 export default function chats() {
   return (
-    <div>
-      <h1 className="text-xl font-medium my-4 px-2">Chats</h1>
+    <Layout title="Chats">
       <div className="flex flex-col divide-y">
-        {[1, 2, 3, 4].map(v => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(v => (
           <ChatRow
             key={v}
             id={v + ""}
@@ -15,6 +15,6 @@ export default function chats() {
           />
         ))}
       </div>
-    </div>
+    </Layout>
   );
 }

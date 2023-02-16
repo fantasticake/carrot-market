@@ -1,3 +1,4 @@
+import ChatBtn from "@/components/chatBtn";
 import CommentRow from "@/components/commentRow";
 import PostRow from "@/components/postRow";
 
@@ -23,6 +24,7 @@ export default function Post() {
           />
         ))}
       </div>
+      <ChatBtn />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Clickable } from "@/utils";
+import { Clickable, cls } from "@/utils";
 import { NextPage } from "next";
 import MiniProfile from "./miniProfile";
 
@@ -25,7 +25,12 @@ const PostRow: NextPage<PostRowProps> = ({
 }) => {
   return (
     <Clickable url={`/community/${id}`} clickable={clickable}>
-      <div className="px-2 space-y-2 py-2">
+      <div
+        className={cls(
+          "transition-colors px-2 space-y-2 py-2",
+          clickable ? "hover:bg-gray-50" : ""
+        )}
+      >
         <h2 className="text-lg font-medium">
           <span className="text-red-400">Q. </span>
           {content}

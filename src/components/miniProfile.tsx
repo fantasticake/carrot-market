@@ -18,15 +18,15 @@ const MiniProfile: NextPage<MiniProfileProps> = ({
     return (
       <Clickable url={`/users/${username}`} clickable={clickable}>
         <div className="hover:opacity-90 transition flex items-center space-x-2">
-          <div className="w-10 aspect-square bg-gray-300 rounded-full" />
+          <div className="w-10 aspect-square shadow-sm bg-gray-300 rounded-full" />
           <span>{username}</span>
         </div>
       </Clickable>
     );
   return (
     <Clickable url={`/users/${username}`} clickable={clickable}>
-      <div className="hover:opacity-90 transition flex space-x-1 items-center">
-        <div className="w-6 aspect-square rounded-full bg-gray-300" />
+      <div className="hover:opacity-90 transition  flex space-x-1 items-center">
+        <div className="w-6 aspect-square shadow-sm rounded-full bg-gray-300" />
         <div className="text-gray-600 text-sm">{username}</div>
       </div>
     </Clickable>

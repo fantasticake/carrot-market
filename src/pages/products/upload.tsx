@@ -23,7 +23,7 @@ export default function Upload() {
         </div>
         <h2 className="font-medium">Description</h2>
         <Textarea placeholder="Description..." />
-        <Button text="Upload" />
+        <Button>Upload</Button>
       </form>
     </div>
   );

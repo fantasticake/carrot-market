@@ -14,11 +14,11 @@ const ImageInput: React.FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   };
 
   return (
-    <div>
+    <div className={cls("text-amber-500 aspect-video", className ?? "")}>
       {image ? (
         <img
           className={cls(
-            "w-full aspect-video object-cover cursor-pointer",
+            "object-cover cursor-pointer aspect-video",
             className ?? ""
           )}
           src={image}
@@ -26,7 +26,7 @@ const ImageInput: React.FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
       ) : (
         <label
           className={cls(
-            "text-amber-500 w-full cursor-pointer flex justify-center items-center aspect-video border-dashed border-2 border-amber-500",
+            "cursor-pointer flex justify-center items-center w-full h-full border-2 border-dashed border-amber-500",
             className ?? ""
           )}
           htmlFor="image"
