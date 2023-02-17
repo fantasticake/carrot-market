@@ -1,10 +1,12 @@
 import { cls } from "@/utils";
 import { InputHTMLAttributes } from "react";
+import { UseFormRegisterReturn } from "react-hook-form/dist/types";
 
-const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
-  className,
-  ...rest
-}) => {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  register?: UseFormRegisterReturn;
+}
+
+const Input: React.FC<InputProps> = ({ className, register, ...rest }) => {
   return (
     <input
       className={cls(
@@ -12,6 +14,7 @@ const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
         className ?? ""
       )}
       {...rest}
+      {...register}
     />
   );
 };

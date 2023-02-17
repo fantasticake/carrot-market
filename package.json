@@ -4,13 +4,17 @@
   "private": true,
   "scripts": {
     "tailwind:watch": "npx tailwindcss -i ./src/styles/tailwind/input.css -o ./src/styles/tailwind/output.css --watch",
+    "db:dev": "pscale connect carrot-market dev --port 3309",
     "dev": "next dev",
+    "db:push": "npx prisma db push",
+    "studio":"npx prisma studio",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@prisma/client": "^4.10.1",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
@@ -19,10 +23,11 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.1",
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "prisma": "^4.10.1",
     "tailwindcss": "^3.2.6"
   }
 }
-
